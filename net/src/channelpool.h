@@ -4,7 +4,7 @@
 
 #ifndef NET_CHANNELPOOL_H
 #define NET_CHANNELPOOL_H
-#include <backward/hash_map>
+
 #define CHANNEL_CLUSTER_SIZE 25
 namespace net{
 class ChannelPool {

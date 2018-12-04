@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 project(common_utils)
 
 #project(${PACKAGE_NAME} CXX C)
+message(STATUS "PROJECT_SOURCE_DIR=${PROJECT_SOURCE_DIR}")
 
 OPTION(BUILD_SHARED_LIBS
         "If enabled,build common_utils as a shared library.\

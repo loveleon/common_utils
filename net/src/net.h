@@ -36,10 +36,9 @@ class Packet;
 class ControlPacket;
 class IPacketFactory;
 class IPacketHandler;
-class IPacketStream;
+class IPacketStreamer;
 class IServerAdapter;
-class DefaultPacketStream;
-class PacketQueue;
+class DefaultPacketStreamer;
 class PacketQueue;
 
 class Socket;

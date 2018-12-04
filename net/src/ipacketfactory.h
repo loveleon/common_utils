@@ -7,7 +7,9 @@
 
 namespace net{
 class IPacketFactory {
-
+ public:
+	virtual ~IPacketFactory(){}
+	Packet* createPacket(int pcode) = 0;
 };
 }
 

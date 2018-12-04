@@ -7,12 +7,10 @@
 #        channel.cpp
 #        )
 include_directories(.)
-include_directories("${PROJECT_SOURCE_DIR}/sys/src")
-include_directories(../../net/src)
+#include_directories("${PROJECT_SOURCE_DIR}/sys/src")
+include_directories(../../sys/src)
 set(SRCS channelpool.cpp
         channel.cpp
-        ipacketfactory.cpp
-        ipackethandler.cpp
         )
 add_library(net ${SRCS})
 target_link_libraries(net $SRCS)
