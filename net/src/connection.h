@@ -38,8 +38,40 @@ class Connection {
 	}
 
 	/*
-	 *
+	 * set default  packet handler
 	 */
+	void setDefaultHandler(IPacketHandler * defaulthandler){
+	    _defaultPacketHandler = defaulthandler;
+	}
+
+	/*
+	 * send packet to output queue.
+	 * @param packet:data package
+	 * @param packetHandler : packet handler
+	 * @param args : parameter
+	 * @param noblocking: no blocking
+	 */
+	bool postPacket(Packet * packet, IPacketHandler * packetHandler=NULL, void * args=NULL , bool noblocking = true);
+
+	/*
+	 * when receive packet ,deal with function
+	 */
+	bool handPacket(DataBuffer * buffer, PacketHeader * header);
+
+	/*
+	 * check timeout
+	 */
+	bool checkTimeout(int64_t now);
+
+	/*
+	 * write to data??
+	 */
+	virtual void writeData() = 0;
+
+	/*
+	 * read  from data
+	 */
+	virtual void readData() = 0;
  protected:
 	IPacketHandler * _defaultPacketHandler; // connection's default packet handler.
 	bool _isServer; 						// is Server endpoint.
